@@ -102,7 +102,7 @@ const commandResponsesEn = {
   return (
     <div className="terminal-wrapper">
       <div className="terminal-header">
-        <span className="terminal-title">bash — MartineczDominik@portfolio:~</span>
+        <span className="terminal-title">bash — MDominik@portfolio:~</span>
         <button
           className="close-button"
           data-bs-toggle="modal"
@@ -116,14 +116,14 @@ const commandResponsesEn = {
           {lines.map((line, index) => (
             <div key={index} className="line">
               {line.isCommand && (
-                <span className="prompt">MartineczDominik@portfolio:~$ </span>
+                <span className="prompt">MDominik@portfolio:~$ </span>
               )}
               {line.text}
             </div>
           ))}
           {/* Input sor */}
           <div className="line">
-            <span className="prompt">MartineczDominik@portfolio:~$ </span>
+            <span className="prompt">MDominik@portfolio:~$ </span>
             <span id="command-input">{commandBuffer}</span>
             <span className="input-cursor"></span>
           </div>

@@ -8,7 +8,7 @@ export default function Home() {
         <div className="row home">
             <div className="row">
                 <div className="col-12 text-center welcome">
-                    <h1 className="mb-2">{translations.welcome}</h1>
+                    <h1 className="">{translations.welcome}</h1>
                 </div>
             </div>
             <div className="row justify-content-center">
@@ -29,7 +29,7 @@ export default function Home() {
                 </div>
             </div>
             <br />
-            <div className="row justify-content-center">
+            <div className="row justify-content-center homeDescription">
                 <div className="col-12 text-center">
                     <h3 className="pt-5">{translations.description}</h3>
                 </div>

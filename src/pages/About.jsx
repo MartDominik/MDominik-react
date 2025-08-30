@@ -11,7 +11,7 @@ export default function About() {
         <h3>{translations.about}</h3>
       </div>
     <div className="terminalContent">
-      <p className="text-center pt-5">{translations.write}<code>help</code></p>
+      <p className="text-center pt-3">{translations.write}<code>help</code></p>
       <Terminal lang={lang} />
     </div>
     </>

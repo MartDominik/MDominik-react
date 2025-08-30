@@ -69,12 +69,13 @@ body {
 }
 
 @media (max-width: 1200px) {
-    .sidebar-custom h4{
+    .sidebar-custom h4 {
         font-size: 1.5rem;
     }
 }
+
 @media (max-width: 1060px) {
-    .sidebar-custom h4{
+    .sidebar-custom h4 {
         font-size: 1.4rem;
     }
 }
@@ -95,10 +96,11 @@ body {
 
 .sidebar-custom nav a {
     display: block;
+    /* width: 80%; */
     width: 80%;
     text-align: center;
     margin: 0.4rem auto;
-    padding: 0.6rem 0;
+    padding: 0.5rem 0;
     text-decoration: none;
     font-size: 1.6rem;
     color: #00FF00;
@@ -143,6 +145,7 @@ body {
 }
 
 .social-icons-fixed .socialHrWithText hr {
+
     height: 2px;
     width: 30%;
     opacity: 0.5;
@@ -159,9 +162,59 @@ body {
     border: 1px solid #00FF00;
 }
 
+.Links {
+    padding-top: 12%;
+}
+
+.social-icons-fixed h6 {
+    font-size: 0.8rem;
+}
+
+.social-icons-fixed .emailLink {
+    font-size: 1.1rem;
+}
+
+
+@media (max-height: 760px) {
+    .Links {
+        padding-top: 2%;
+    }
+
+    .sidebar-custom nav a {
+        padding: 0.3rem 0;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-height: 640px) {
+
+    .social-icons-fixed .socialHrWithText span,
+    hr {
+        display: none;
+    }
+
+    .social-icons-fixed .icons {
+        display: none;
+    }
+
+    .social-icons-fixed h6 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+}
+
+@media (max-height: 540px) {
+    .social-icons-fixed {
+        display: none;
+    }
+}
+
+
 
 /* ---------------------------------------------- */
-/* offcanvas css */
+/* offcanvas css
 #mobileSidebar {
     min-height: 100vh;
     background-color: #121212;
@@ -254,6 +307,128 @@ body {
 #mobileSidebar .offcanvas-title {
     color: #00FF00;
 }
+@media (max-width: 540px) {
+  
+} */
+
+/* Base styles (already good for desktop & larger devices) */
+#mobileSidebar {
+    min-height: 100vh;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem 1rem;
+}
+
+#mobileSidebar h4 {
+    color: #00FF00;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#mobileSidebar img {
+    width: 40%;
+    object-fit: cover;
+    margin-bottom: 1.2rem;
+}
+
+#mobileSidebar .langSelect,
+#mobileSidebar .langSelect a {
+    color: #00FF00;
+    font-size: 0.75rem;
+}
+
+#mobileSidebar nav a {
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin: 0.3rem auto;
+    padding: 0.3rem 0;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #00FF00;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s;
+}
+
+#mobileSidebar nav a:hover {
+    background-color: #008000;
+}
+
+#mobileSidebar .social-icons-fixed {
+    position: absolute;
+    margin-top: 2rem;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#mobileSidebar .social-icons-fixed h6 {
+    font-size: 0.7rem;
+}
+
+#mobileSidebar .social-icons-fixed .emailLink {
+    font-size: 0.9rem;
+}
+
+#mobileSidebar .social-icons-fixed a {
+    color: #00FF00;
+    margin: 0 8px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+#mobileSidebar .social-icons-fixed a:hover {
+    color: #008000;
+}
+
+#mobileSidebar .social-icons-fixed .socialHrWithText hr {
+    height: 2px;
+    width: 30%;
+    opacity: 0.5;
+    border-color: #00FF00;
+}
+
+#mobileSidebar .social-icons-fixed p {
+    font-size: 0.75rem;
+    color: #00FF00;
+}
+
+#mobileSidebar .offcanvas-header {
+    padding-bottom: 0;
+}
+
+#mobileSidebar .text-center {
+    margin-top: 0.5rem;
+}
+
+#mobileSidebar .bezar {
+    color: #00FF00;
+    border: 1px solid #00FF00;
+}
+
+#mobileSidebar .offcanvas-title {
+    color: #00FF00;
+}
+
+@media (max-width: 768px) {
+    #mobileSidebar .social-icons-fixed {
+        bottom: 4rem;
+    }
+}
+@media (max-width: 650px) {
+    #mobileSidebar .social-icons-fixed {
+        bottom: 5.5rem;
+    }
+}
+@media (max-width: 480px) {
+    #mobileSidebar .social-icons-fixed {
+        bottom: 6.5rem;
+    }
+}
+
 
 /* ---------------------------------------------- */
 /* Content css */
@@ -261,7 +436,7 @@ body {
     /* min-height: 100vh; */
     background-color: #13161d;
     /* padding: 2rem 1.5rem; */
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
@@ -307,9 +482,29 @@ pre.ascii-art {
     padding-top: 18vh;
 }
 
-@media (max-width: 989px) {
+@media (max-width: 990px) {
     .home {
         padding-top: 8vh;
+    }
+}
+
+@media (max-width: 740px) {
+    .home {
+        padding-top: 4vh;
+    }
+
+    .welcome h1 {
+        font-size: 1.5rem;
+    }
+
+    .homeDescription h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 490px) {
+    .home {
+        padding-top: 0vh;
     }
 }
 
@@ -389,11 +584,18 @@ a.text-link:hover {
 /* projects css */
 
 .pj-container {
-    height: 90vh;
+    height: 80vh;
     overflow-y: auto;
 
     scrollbar-width: auto;
     scrollbar-color: #00ff00 #171717;
+}
+
+@media (max-height: 700px) {
+    .pj-container {
+        height: 72vh;
+        scrollbar-width: thin;
+    }
 }
 
 .custom-card {
@@ -506,6 +708,7 @@ strong {
 /* terminal css */
 .terminal-wrapper {
     width: 85%;
+    /* height: 50%; */
     /* max-width: 800px; */
     margin: 0 auto;
     /* border: 2px solid #00ff00; */
@@ -516,6 +719,12 @@ strong {
     background-color: #111;
     overflow: hidden;
 }
+
+/* @media (max-height: 600px) {
+    .terminal-wrapper {
+        height: 30%;
+    }
+} */
 
 .terminal-header {
     display: flex;
@@ -548,14 +757,21 @@ strong {
 .terminal-output {
     background-color: #0D0D0D;
     color: #00ff00;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding: 20px;
-    height: 500px;
+    height: 55vh;
     overflow-y: auto;
     white-space: pre-wrap;
 
     scrollbar-width: thin;
     scrollbar-color: #00ff00 #171717;
+}
+
+@media (max-height: 700px) {
+    .terminal-output {
+        font-size: 1.1rem;
+        height: 40vh;
+    }
 }
 
 .line {
