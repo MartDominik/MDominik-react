@@ -16,10 +16,10 @@ const Terminal = ({ lang }) => {
     vegzettseg: "Végzettségeim:\n  - Középiskola: Eötvös... - informatika szak\n  - OKJ: Hengersor... - Szoftverfejlesztő informatikus\n  - Egyetem: Gábor... - Mérnökinformatikus (jelenleg is ide járok.)\n  - Nyelvvizsga: ITOLC... - B2?",
     tapasztalat: "Tapasztalataim:\n  Projektjeim:\n    - OKJ: Mestermunka Laravel Weboldal + C# alkalmazás [itt megtekinthető]\n    - Maszek?: C# Szolárium vendég kezelő alkalmazás\n  Gyakornoki állásaim:\n    - Bosch: Weboldal fejlesztő (jelenleg is itt dolgozom.)",
     keszseg: 'Webfejlesztés:\n  - PHP\n  - Laravel\n  - Bootstrap\n  - jQuerry\n \nAlkalmazás:\n  - C#\n  - Python',
-    hobbi:'Hobbijaim:\n  - Webfejlesztéssel való kísérletezés\n  - Országúti biciklizés\n  - Horgászás',
-};
+    hobbi: 'Hobbijaim:\n  - Webfejlesztéssel való kísérletezés\n  - Országúti biciklizés\n  - Horgászás',
+  };
 
-const commandResponsesEn = {
+  const commandResponsesEn = {
     '': '',
     lang: 'en',
     help: "",
@@ -30,7 +30,7 @@ const commandResponsesEn = {
     experience: "My Experience:\n  Projects:\n    - Vocational: Master Thesis Laravel Website + C# Application [viewable here]\n    - Freelance?: C# Solarium guest management application\n  Internships:\n    - Bosch: Web Developer (currently working here)",
     skill: "Web Development:\n  - PHP\n  - Laravel\n  - Bootstrap\n  - jQuery\n\nApplications:\n  - C#\n  - Python",
     hobbi: "My Hobbies:\n  - Experimenting with web development\n  - Road cycling\n  - Fishing"
-};
+  };
 
   // Help feltöltése
   const updateHelp = (obj) => {
@@ -111,7 +111,7 @@ const commandResponsesEn = {
           ✖
         </button>
       </div>
-      <div className="terminal-container">
+      <div className="terminal-container" onClick={() => document.getElementById("terminal-input").focus()} >
         <div id="terminal-output" className="terminal-output" ref={outputRef}>
           {lines.map((line, index) => (
             <div key={index} className="line">
@@ -125,9 +125,16 @@ const commandResponsesEn = {
           <div className="line">
             <span className="prompt">MDominik@portfolio:~$ </span>
             <span id="command-input">{commandBuffer}</span>
+            {/* <span id="command-input" contenteditable="true">{commandBuffer}</span> */}
             <span className="input-cursor"></span>
           </div>
         </div>
+        <input
+          id="terminal-input"
+          type="text"
+          style={{ opacity: 0, position: "absolute", pointerEvents: "none" }}
+          onChange={(e) => handleInputChange(e)}
+        />
       </div>
     </div>
   );
