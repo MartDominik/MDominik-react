@@ -661,7 +661,11 @@ strong {
     color: red;
 }
 .hidden-input {
-  position: absolute;
+  position: fixed;   /* nem vesz részt a layoutban */
+  top: -9999px;      /* biztosan kint legyen a viewportból */
+  left: -9999px;
+  width: 1px;        /* minimális méret */
+  height: 1px;
   opacity: 0;
   pointer-events: none;
 }

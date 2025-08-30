@@ -81,7 +81,7 @@ It’s a small experimental playground where you can explore interactive ideas a
       ? " Egy <b>C#</b> asztali alkalmazás, ami <b>WPF</b> keretrendszerben lett felépítve. Ez az alkalmazás szolgál az aktív versenyeknek a valós időben történő állásának a rögzítésére, illetve struktúrált Excel táblázatban is visszaadja az eredményeket."
       : " A <b>C#</b> desktop application built using the <b>WPF</b> framework. This application records the real‑time standings of active competitions and also exports the results into a structured Excel spreadsheet.",
 
-    maszek: lang === "hu" ? "Maszek? - Szolárium vendég kezelő"
+    maszek: lang === "hu" ? "Független – Szolárium vendégmenedzser"
       : "Freelance? - Solarium Guest Manager",
     maszekDesc: lang === "hu"
       ? 'Egy Szoláriumnak egy "egyszerűbb" vendég kezelő rendszere.'
